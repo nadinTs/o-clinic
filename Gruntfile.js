@@ -132,7 +132,8 @@ module.exports = function(grunt) {
                     sections: {
                         layout: {
                             header: '<%= fixturesPath %>source/layout/header.html',
-                            footer: '<%= fixturesPath %>source/layout/footer.html'
+                            footer: '<%= fixturesPath %>source/layout/footer.html',
+                            leftMenu: '<%= fixturesPath %>source/layout/left-menu.html'
                         }
                     },
                     data: {

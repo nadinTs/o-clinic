@@ -1,0 +1,109 @@
+.left-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 700%;
+  width: 100px;
+  background-color: #e8475c;
+  display: table;
+  float: left;
+  z-index: 100;
+  -moz-transition: all 1.2s cubic-bezier(0.63, 0.64, 0.3, 1);
+  -webkit-transition: all 1.2s cubic-bezier(0.63, 0.64, 0.3, 1);
+  transition: all 1.2s cubic-bezier(0.63, 0.64, 0.3, 1);
+}
+
+
+.text-transform {
+  display: block;
+  padding-top: 220px;
+  height: 100px;
+  width: 100px;
+  -moz-transition:  1.2s;
+  -webkit-transition:1.2s;
+  transition:  1.2s;
+}
+.text-transform span {
+  color: #FFFFFF;
+  display: block;
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing:0.1em;
+
+}
+
+.left-menu__line {
+  padding: 0 20px 20px 20px;
+}
+.left-menu__line  a{
+  margin-bottom: 20px;
+}
+.left-menu__line  a{
+  display: block;
+  width: 29px;
+  height: 2px;
+  background-color: #f298a4;
+}
+.left-menu__line  a.red {
+  display: block;
+  width: 58px;
+  height: 2px;
+  background-color: #FFFFFF;
+  /*-moz-transition: all 1.2s;*/
+  /*-webkit-transition: all 1.2s;*/
+  /*transition: all 1.2s;*/
+}
+.left-menu__barcod{
+  width: 100px;
+  -moz-transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+.left-menu__barcod ul li{
+  width: auto;
+  display: inline-block;
+}
+.left-menu__barcod, .left-menu__barcod a {
+  color: #FFFFFF;
+  font-size: 0;
+  line-height: 1.4em;
+  -moz-transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+.left-menu:hover {
+  width: 250px;
+
+}
+
+.left-menu:hover .left-menu__barcod a,.left-menu:hover .left-menu__barcod {
+  font-size: 11px;
+  -moz-transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+.left-menu:hover .left-menu__barcod {
+  overflow: auto;
+  width: 230px;
+  padding-left: 20px;
+  padding-top: 140px;
+}
+.left-menu:hover .text-transform  {
+  padding-top: 20px;
+  width: 210px;
+}
+.left-menu:hover .text-transform span {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  padding:0 20px;
+  display: block;
+  font-size: 26px;
+  white-space: normal;
+  letter-spacing: normal;
+}
