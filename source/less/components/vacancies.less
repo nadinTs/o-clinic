@@ -1,0 +1,217 @@
+.greeting {
+  padding: 80px 70px 60px 150px;
+  margin-left: 100px;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  &__img {
+    width:310px;
+    height: 395px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight:300;
+    line-height: 1.8em;
+    color: #272727;
+    background-color: #FFFFFF;
+    width: 700px;
+    padding: 25px 35px 40px 40px;
+    position: absolute;
+    top: 120px;
+    left: 420px;
+    &--title {
+      padding-bottom: 40px;
+      & span{
+        font-size: 18px;
+        font-weight: 700;
+        display: block;
+        line-height: 2em;
+      }
+    }
+  }
+}
+.plus {
+  border-bottom: 1px solid #f0f0f0;
+  margin-left: 100px;
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e8475c;
+    text-transform: uppercase;
+    padding: 80px 0 80px 40px;
+    margin-left: 100px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  & ul {
+    white-space: nowrap;
+  }
+  & ul li {
+    display: table-cell;
+    border-right: 1px solid #f0f0f0;
+    white-space: normal;
+    width: 16%;
+    padding: 45px 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    vertical-align: top;
+    & span {
+      display: block;
+      font-size: 36px;
+      padding-bottom: 20px;
+    }
+  }
+  & ul li:last-child {
+    border-right: none;
+  }
+}
+.center-address {
+  margin-left: 100px;
+  padding: 70px 0 70px 40px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #272727;
+  & span {
+    color: #aaa9a9;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 300;
+    padding-left: 20px;
+  }
+}
+.vacancies {
+  &__wrap {
+    margin-left: 100px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+    & > ul > li {
+    position: relative;
+  }
+
+  & > ul > li > span {
+    padding: 30px 20px 30px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #FFFFFF;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+  }
+  & > ul > li:before {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 42px;
+      left: 0;
+      z-index: -1;
+      background-color: #f05163;
+      height: 1px;
+  }
+  & > ul > li:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    top:38px;
+    right: 30px;
+    background:#FFFFFF url("../img/arrows.png") no-repeat -275px 0;
+    z-index: 10;
+  }
+
+  & > ul > li:hover {
+    background-color: #fafafa;
+    & span {
+      background-color: #fafafa;
+      z-index: 10;
+    }
+    &:after {
+      background-color: #fafafa!important;
+    }
+    &:before {
+      z-index: 1;
+    }
+    & >.vacancies__item,
+    & >.coast__item ,
+    & >.coast-tr:nth-child(2n + 1) > .price-sale > span ,
+    & >.coast__item .coast-table {
+      background-color: #FFFFFF!important;
+    }
+  }
+  &__item {
+    padding-left: 60px;
+    &--title {
+      color: #e8475c;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 30px 0;
+    }
+    &> ul > li {
+      color: #3d3d3d;
+      font-size: 14px;
+      padding: 0 30px 30px 30px;
+      line-height: 1.8em;
+      position: relative;
+      &:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        display: block;
+        position: absolute;
+        background-color: #e8475c;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        top: 10px;
+        left: 0;
+      }
+    }
+
+  }
+}
+.contacts {
+  margin-left: 100px;
+  padding: 70px 0 0 0;
+  display: table;
+  &__img {
+    display: table-cell;
+    width: 340px;
+    text-align: right;
+    vertical-align: top;
+    border-right: 1px solid #f0f0f0;
+    padding-right: 20px;
+  }
+  &__text {
+    vertical-align: top;
+    display: table-cell;
+    width: 600px;
+    text-align: left;
+    padding: 0 0 0 20px;
+    font-size: 16px;
+    color: #3d3d3d;
+    font-weight: 300;
+    line-height: 1.6em;
+    a {
+      color: #3d3d3d;
+      font-weight: 700;
+      &.contacts__text--link {
+        color: #e8475c;
+        font-weight:300;
+      }
+    }
+    &--italic {
+      font-style: italic;
+      font-weight: 300;
+      padding-top: 30px;
+    }
+  }
+}
