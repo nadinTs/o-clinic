@@ -967,6 +967,7 @@ footer p.copyright {
   -moz-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   -o-transform: rotate(0deg);
+  transform: rotate(0deg);
   padding: 0 20px;
   display: block;
   font-size: 26px;
@@ -1090,6 +1091,7 @@ footer p.copyright {
 }
 .vacancies > ul > li {
   position: relative;
+  cursor: pointer;
 }
 .vacancies > ul > li > span {
   padding: 30px 20px 30px 40px;
@@ -1223,24 +1225,32 @@ footer p.copyright {
   background: #FFFFFF url("../img/arrows.png") no-repeat -275px -84px !important;
   z-index: 11;
 }
+.coast__wrap {
+  border: none;
+}
 .coast-title {
-  position: relative;
   font-size: 24px!important;
+  padding: 70px 20px 70px 40px!important;
 }
 .coast-note {
   position: absolute;
+  display: block;
   font-size: 14px;
   color: #e8475c;
   font-weight: 700;
-  top: 34px;
+  top: 74px;
   right: -159px;
   padding: 0!important;
 }
+.coast > ul > li {
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
 .coast > ul > li:before {
-  top: 56px;
+  top: 94px;
 }
 .coast > ul > li:after {
-  top: 52px;
+  top: 94px;
 }
 .coast-table {
   color: #3d3d3d;
@@ -1248,7 +1258,8 @@ footer p.copyright {
   display: table;
   border-collapse: collapse;
   border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+  width: 100%;
 }
 .coast-tr {
   display: table-row;
@@ -1293,9 +1304,29 @@ footer p.copyright {
 .coast-tr:nth-child(2n) {
   background-color: #fafafa;
 }
-.coast-tr:after {
-  content: '';
+.register__wrap {
+  position: relative!important;
   display: block;
-  width: 100px;
-  height: 20px;
+}
+.register {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 46px 0;
+  text-align: center;
+  background-color: rgba(241, 94, 111, 0.7);
+}
+.register a {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+}
+.register a:hover {
+  text-decoration: underline;
+}
+.register__wrap:hover > .register {
+  display: inline-block;
 }

@@ -221,9 +221,9 @@ $(document).ready(function(){
 
 });
 $(document).ready(function() {
-    $('.harmonica-menu-js span').click(function(){
-        $(this).next('.harmonica-menu-js-hidden').slideToggle();
-        $(this).next('.harmonica-menu-js-item').slideToggle();
+    $('.harmonica-menu-js li').click(function(){
+        $(this).children('.harmonica-menu-js-hidden').slideToggle();
+        $(this).children('.harmonica-menu-js-item').slideToggle();
         $(this).toggleClass('harmonica-menu-js-close');
         $(this).closest('li').toggleClass('harmonica-arrows');
     });
