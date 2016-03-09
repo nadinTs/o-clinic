@@ -20,7 +20,9 @@ $(document).ready(function(){
     });
     $('video-slider__ex').bxSlider({
         video: true,
-        useCSS: false
+        useCSS: false,
+        touchEnabled:true,
+        preventDefaultSwipeY:true
     });
     $(".link").click(function() {
         $.fancybox({
@@ -211,11 +213,11 @@ $(document).ready(function(){
             }
         });
     };
-    $('.video-slider').on('click', function() {
+    //$('.video-slider').on('click', function() {
         //$(this).parent('div.bx-viewport').children('.bx-default-pager').animate({opacity: 'toggle'}, 1000);
         //$(this).find('.bx-default-pager').animate({opacity: 'toggle'}, 1000);
-        console.log(this);
-    });
+        //console.log(this);
+    //});
 
     $('.js-insert-video').insertVideo();
 
