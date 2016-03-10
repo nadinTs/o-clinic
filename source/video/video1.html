@@ -22,7 +22,9 @@
 </div>
 <script src="../js/jquery-1.11.3.min.js"></script>
 <script>
-//    var vid = document.getElementById("top_movie");
+//    parent.$(parent.document).trigger('callmod', function(){
+//    });
+    var vid = document.getElementById("top_movie");
 
 $('div[class*="video-overlay"]').bind('mousedown', function() {
     var video       = $(this).find('video')[0];
@@ -35,6 +37,13 @@ $('div[class*="video-overlay"]').bind('mousedown', function() {
         }
     });
 });
+//    $('html').bind('mousedown', function(){
+//        console.log('remove');
+//            $(this).click(function() {
+//               $(this).parent('iframe').remove();
+////                console.log(div.js-insert-video);
+//            });
+//    });
 </script>
 </body>
 </html>
