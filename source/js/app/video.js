@@ -12,31 +12,32 @@ $(document).ready(function(){
         $(this).find('img').animate({opacity: 'toggle'}, 1000);
         if($(this).find('img').css('opacity') == 1){
             console.log("hi");
-            $(this).append('<div class="article__inline-video__link js-insert-video">' +'<iframe width="100%" height="800px" src="video/video1.html" frameborder="0" allowfullscreen scrolling="no">' + '</iframe>' + '</div>');
-            var iframe = document.getElementsByTagName('iframe')[0];
-            var iframeDoc = iframe.contentWindow.document;
-            if (iframeDoc.readyState == 'complete') {
-                iframeDoc.body.style.backgroundColor = 'green';
-                alert("jjjj");
-            }
-            iframe.onload = function() {
-                var iframeDoc2 = iframe.contentWindow.document;
-                alert("dddddd");
-            }
+            $(this).append('<div class="article__inline-video__link js-insert-video">' + '<video autoplay="true" width="100%" loop="loop" muted id="top_movie" poster="../img/slider-bottom.jpg">' + ' <source src="http://www.atmt.ru/wp-content/uploads/2015/03/2.mp4" type="video/mp4"> ' + ' <source src="http://www.atmt.ru/wp-content/uploads/2015/03/2.ogv" type="video/ogg">' + '<source src="http://www.atmt.ru/wp-content/uploads/2015/03/2.webm" type="video/webm">' + ' Your browser does not support HTML5 video.' + '</video>' + '</div>');
+            $('div[class*="js-insert-video"]').bind('mousedown', function() {
+                var video       = $(this).find('video')[0];
+                console.log(video);
+                $(this).click(function() {
+                    if(video.paused) {
+                        video.play();
+                    }
+                    else  {
+                        video.pause();
+                        console.log("poused ");
+
+                    }
+                });
+            });
 
         } else {
 
-
-
-
-            //$(this).find('div.js-insert-video').remove();
-            //frame.parentNode.removeChild(frame);
-
         }
-        //$(this).find('img').hide();
-        //$(this).append('<div class="article__inline-video__link js-insert-video">' +'<iframe width="100%" height="800px" src="video/video1.html" frameborder="0" allowfullscreen scrolling="no">' + '</iframe>' + '</div>');
+
     });
 });
 //<!--<div class="article__inline-video__link js-insert-video">
 //<iframe src="video/video1.html" width="100%" height="800px" frameborder="0" scrolling="no" allowFullScreen webkitallowfullscreen mozallowfullscreen></iframe>
 //</div>-->
+jwplayer("player").setup({
+    file:"../source/video/OC - videoslide - HQ.m4v",
+    image:"../source/img/slider-bottom.jpg"
+});
